@@ -114,7 +114,8 @@ func main() {
 	}
 
 	if !checkPath(path + "/platformio.ini") {
-		fmt.Println("Not a platformio project. Running init anyway")
+		fmt.Println("Not a platformio project. Exting...")
+		os.Exit(1)
 	}
 
 	if err := os.Chdir(path); err != nil {
